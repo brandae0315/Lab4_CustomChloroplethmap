@@ -120,7 +120,7 @@
 }
 
  // add geojson file to the map          
- geojson = L.geoJson.ajax("contCO2emis2023.geojson", {style: style, onEachFeature: onEachFeature}).addTo(map);
+ geojson = L.geoJson.ajax("/contCO2emis2023.geojson", {style: style, onEachFeature: onEachFeature}).addTo(map);
 
 
 // 4. create the legend
@@ -211,3 +211,4 @@ map.attributionControl.addAttribution('Annual CO2 emission data &copy; <a href="
 
 
 </html>
+
