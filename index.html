@@ -119,8 +119,8 @@
         };            
 }
 
- // add geojson file to the map          
- geojson = L.geoJson.ajax("/contCO2emis2023.geojson", {style: style, onEachFeature: onEachFeature}).addTo(map);
+ // add geojson file to the map---commented out due to error and relaced down below          
+ //geojson = L.geoJson.ajax("/contCO2emis2023.geojson", {style: style, onEachFeature: onEachFeature}).addTo(map);
 
 
 // 4. create the legend
@@ -200,7 +200,11 @@ $(".legend").html(labels.join('<br>'));
                   mouseout: resetHighlight
                   });
                   }
- 
+        
+ // add geojson file to the map 
+ geojson = L.geoJson.ajax("/contCO2emis2023.geojson", {style: style, onEachFeature: onEachFeature}).addTo(map);
+
+        
 map.attributionControl.addAttribution('Annual CO2 emission data &copy; <a href="https://ourworldindata.org/grapher/annual-co2-emissions-per-country">Our World in Data</a> | This map is made by Alexandra Brand');
 
 
@@ -211,4 +215,5 @@ map.attributionControl.addAttribution('Annual CO2 emission data &copy; <a href="
 
 
 </html>
+
 
