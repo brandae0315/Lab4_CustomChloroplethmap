@@ -203,8 +203,12 @@ $(".legend").html(labels.join('<br>'));
         
  // add geojson file to the map 
  //geojson = L.geoJson.ajax("/contCO2emis2023.geojson", {style: style, onEachFeature: onEachFeature}).addTo(map);
+//L.geoJson.ajax("contCO2emis2023.geojson", { style: style, onEachFeature: onEachFeature }).addTo(map);
+        geojson = L.geoJson.ajax("contCO2emis2023.geojson", {
+  style: style,
+  onEachFeature: onEachFeature
+}).addTo(map);
 
-L.geoJson.ajax("contCO2emis2023.geojson", { style: style, onEachFeature: onEachFeature }).addTo(map);
 
 
         
@@ -218,6 +222,7 @@ map.attributionControl.addAttribution('Annual CO2 emission data &copy; <a href="
 
 
 </html>
+
 
 
 
