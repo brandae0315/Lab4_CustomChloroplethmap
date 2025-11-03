@@ -81,7 +81,8 @@
           var map = L.map('map').setView([30.517293, -12.551819], 2); //latlong coordinates centered over US
             
           L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-          
+        
+         var geojson; 
 
          var grades = [0, 400000000, 1000000000, 2000000000, 5000000000, 10000000000, 23000000000];
          //400000000, 1000000000, 2000000000, 5000000000, 10000000000, 23000000000 //382972000, 430302660, 1108965000, 1418739200, 4993221000, 6123549700, 22600220000
@@ -222,6 +223,7 @@ map.attributionControl.addAttribution('Annual CO2 emission data &copy; <a href="
 
 
 </html>
+
 
 
 
